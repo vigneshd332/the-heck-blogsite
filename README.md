@@ -21,7 +21,8 @@
 * The project entirely uses Django's built in forms to get and save data from the user and to login, logout the user.
 * The local html templates are located in the **'templates'** folder in the respective app folders and the global templates in the main folder. All the local templates extend from the main template **'baselayout.html'**.
 * The media files and styling elements are located in the **'static'** folder.
-* Basic workflow:
+
+### Basic workflow:
 <img src='media/Blogsite-Flowchart.png' margin =10px height = 460 width = 550/>
 
 ### Features to be added:
