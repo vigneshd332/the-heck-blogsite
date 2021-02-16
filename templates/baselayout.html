@@ -1,0 +1,39 @@
+{% load static from static %}
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>The Heck: Find out what the heck is going on</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}">
+    </head>
+    <body>
+        <div class='wrapper'>
+            <h1><a href="{% url 'articles:list' %}"><img src="{% static 'The Heck_com-logos_white.png' %}" width="500" height="600"/></a></h1>
+        <div class='Mottolol'><h2>Find out what the heck is going on</h2></div>
+            <nav>
+                <ul>
+                    {% if user.is_authenticated %}
+                    <li>
+                        <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                            {% csrf_token %}
+                            <button type='submit'>Logout</button>
+                        </form>
+                    </li>
+                    <li>
+                        <a href="{% url 'articles:create' %}" class='highlight'>Create new Article</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'accounts:login' %}">Login</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'accounts:signup' %}">Sign Up</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </nav>
+            {% block content %}
+            {% endblock %}
+        </div> 
+    </body>
+</html>
