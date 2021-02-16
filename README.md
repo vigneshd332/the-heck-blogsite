@@ -1,4 +1,4 @@
-# THE HECK?.com
+# The Heck?.com
 ## A blogging website built using Django 3.1
 ### ‼ Ensure you create a folder called **'blogsite'** and place the contents of this repo into it before testing to avoid errors ‼
 
